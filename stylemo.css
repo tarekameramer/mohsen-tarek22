@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+* {
+    box-sizing: border-box;
+font-family:"Quicksand",sans-serif
+}
+
+body {
+    margin: 0;
+    background-color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+.cover {
+    display: flex;
+    gap: 2px;
+    width: 100%;
+ flex-wrap: wrap;
+    height: 100vh;
+z-index: 1;
+}
+.main::before{
+    content: "";
+    height: 100%;
+    width: 100%;
+background: linear-gradient(#000,#0f0,#000);
+z-index: -1;
+position: absolute;
+animation: anmi 5s  linear infinite;
+}
+@keyframes anmi{
+0%{
+    transform: translateY(-100%);
+}
+100%{
+    transform: translateY(100%);
+}
+}
+.cover div {
+    width: calc(100% / 16 - 2px);
+    height: calc(100% / 7 - 2px);
+    background: black;
+    transition: 1.5s;
+}
+.cover div:hover{
+    background: greenyellow;
+    transition: 0s;
+}
+.container{
+display: flex;
+padding: 40px;
+gap: 40px;
+flex-direction: column;
+position: absolute;
+z-index: 2;
+background-color: #222;
+border-radius: 4px;
+box-shadow: #0f0;
+width: 499px;
+}
+.links{
+display: flex;
+flex-direction: column;
+gap: 25px;
+
+}
+.h2{
+
+}
+.a{
+display: flex;
+justify-content: space-between;
+}
+.a a:first-child{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    text-transform: capitalize;
+}
+#password ,#text{
+    padding:25px 10px 7.5 10px ;
+    border: none;
+    background-color:#333 ;
+    outline: none;
+}
+.submit{
+padding: 10px;
+background-color: #0f0;
+outline: none;
+border: none;
+cursor: pointer;
+border-radius: 3px;
+}
+.h2 h2{
+    color: rgb(0, 255, 0);
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    text-transform:uppercase ;
+    font-weight: 400;
+}
+i#c{
+    position: absolute;
+    top: 135;
+    z-index: 50px;
+    left: 40px;
+    color: white;
+    font-style: normal;
+    transition: 0.5s;
+}
+i#d{
+    position: absolute;
+    bottom: 147px;
+    z-index: 50px;
+    left: 40px;
+    color: white;
+    font-style: normal;
+    transition: 0.5s;
+
+}
